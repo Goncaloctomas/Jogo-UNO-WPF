@@ -1,63 +1,81 @@
-# 🎴 Jogo UNO em WPF (.NET 8)
+# UNO Card Game
 
-Um jogo de cartas **UNO** interativo desenvolvido em C# com **WPF (Windows Presentation Foundation)**. O projeto inclui suporte para múltiplos jogadores, cartas especiais, persistência de dados em XML para guardar o estado do jogo e estatísticas completas de vitórias/derrotas.
+A desktop implementation of the UNO card game developed in C# using WPF and .NET 8.
 
----
+## Overview
 
-## 🚀 Funcionalidades
+This project implements a graphical version of UNO, combining game logic, player management and a desktop user interface.
 
-- **Regras Clássicas do UNO:**
-  - Suporte a cartas numéricas (0 a 9) e cartas especiais (*Compra 2*, *Inverter*, *Salta*).
-  - Cartas de ação especial (*Joker* e *Joker +4*) com escolha de cor ativa.
-  - Mecânica de acumulação de penalizações e alternância do sentido de jogo.
-- **Persistência de Dados (XML):**
-  - **Guardar e Carregar Jogo:** Guarda o estado completo do jogo (mão dos jogadores, baralho, pilha de descarte, sentido e cor ativa) para continuar mais tarde.
-  - **Estatísticas Históricas:** Registo automático de jogos/partidas jogadas, vitórias e percentagens de sucesso por jogador.
-- **Interface Gráfica (WPF):**
-  - Layout personalizado com design visual temático.
-  - Animações e efeitos visuais usando *DropShadows* e estilização XAML personalizada.
+The application was developed to put object-oriented programming concepts into practice while exploring graphical application development, data persistence and game statistics.
 
----
+## Features
 
-## 🛠️ Tecnologias Utilizadas
+- **Graphical User Interface:** A desktop interface built with Windows Presentation Foundation (WPF).
+- **Game Logic:** Classes to manage the game, cards, deck and players.
+- **Player and Bot Selection:** Interface components for configuring players and selecting bots.
+- **Data Persistence:** XML-based storage for saving and loading application data.
+- **Game Statistics:** A dedicated window for displaying game statistics.
 
-- **Linguagem:** C#
-- **Framework:** .NET 8.0 (Windows)
-- **Interface Gráfica:** WPF (Windows Presentation Foundation)
-- **Armazenamento de Dados:** XML (`XDocument` / `System.Xml.Linq`)
+## Technologies
 
----
+- **Language:** C#
+- **Framework:** .NET 8
+- **Desktop UI:** Windows Presentation Foundation (WPF)
+- **Data Persistence:** XML
+- **Development Environment:** Visual Studio
 
-## 📂 Estrutura do Projeto
+## Getting Started
 
-```text
-├── Assets/                 # Imagens e recursos visuais (baralho, mesa)
-├── App.xaml / App.xaml.cs  # Ponto de entrada da aplicação
-├── Baralho.cs              # Lógica de criação, baralhação e compra de cartas
-├── Carta.cs                # Modelo de dados e regras de validação das cartas
-├── GestorXml.cs            # Leitura e escrita de ficheiros XML (Jogo e Estatísticas)
-├── EstatisticasWindow.xaml # Janela de visualização do histórico de jogadores
-└── MainWindow.xaml         # Janela principal do jogo
+### Prerequisites
+
+- Windows.
+- .NET 8 SDK.
+- Visual Studio with the .NET desktop development workload, or a compatible .NET development environment.
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Goncaloctomas/Jogo-UNO-WPF.git
+   cd Jogo-UNO-WPF
+   ```
+
+2. Open `Jogo.slnx` or `Jogo.csproj` in Visual Studio.
+
+3. Restore the project dependencies if required.
+
+4. Build and run the application.
+
+Alternatively, run the project from a terminal on Windows:
+
+```bash
+dotnet run --project Jogo.csproj
 ```
 
----
+## Project Structure
 
-## ⚙️ Como Executar o Projeto
+The project separates several responsibilities into different classes and windows, including:
 
-### Pré-requisitos
-- **Visual Studio 2022** (com a carga de trabalho *.NET desktop development* instalada) ou **SDK do .NET 8.0**.
-- Sistema Operativo **Windows**.
+- **Game Logic:** Core game management and gameplay operations.
+- **Cards and Deck:** Representation and management of cards.
+- **Players:** Player-related data and behaviour.
+- **XML Management:** Persistence through XML files.
+- **User Interface:** WPF windows for gameplay, configuration and statistics.
 
-### Passos
-1. Clona este repositório:
-   ```bash
-   git clone https://github.com/TEU_UTILIZADOR/TEU_REPOSITORIO.git
-   ```
-2. Abre o ficheiro do projeto (`.csproj` ou `.sln`) no Visual Studio.
-3. Compila e executa o projeto premindo **F5** ou clicando em **Start / Iniciar**.
+## Learning Objectives
 
----
+This project provided practical experience with:
 
-## 📝 Licença
+- Object-oriented programming in C#.
+- Designing desktop applications with WPF and XAML.
+- Separating game logic from user interface components.
+- Persisting and retrieving data using XML.
+- Organizing a multi-file application.
+- Managing application state and game statistics.
 
-Este projeto foi desenvolvido para fins educacionais e de demonstração. Sente-te à vontade para utilizar, modificar e contribuir!
+## Author
+
+**Gonçalo Tomás**
+
+[GitHub Profile](https://github.com/Goncaloctomas)
